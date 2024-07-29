@@ -1,0 +1,119 @@
+/**********************************************
+*** © Linguagens Script > DEIS > ISEC > IPC 
+*** Jogo de Memória em React
+*** Estilos para card.component.jsx 
+**********************************************/
+
+.card {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    position: rel;
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+    padding: 10px;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transform: scale(1);
+    transition: transform 0.4s;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.card-cruz,
+.card-circulo {
+    width: 100%; /* Ajuste o tamanho da imagem para preencher o botão */
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-image {
+    pointer-events: none;
+}
+
+.board-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 13px);
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.mini-board {
+    margin-bottom: 15px;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ajuste o tamanho do botão de acordo com suas necessidades */
+    height: 50px;
+    border: 2px solid transparent; /* Adiciona uma borda transparente */
+    background-color: #f3ecec;
+    cursor: pointer;
+    transition: border-color 0.2s ease; /* Transição suave da cor da borda */
+}
+
+.squareVermelho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ajuste o tamanho do botão de acordo com suas necessidades */
+    height: 50px;
+    border: 2px solid transparent; /* Adiciona uma borda transparente */
+    background-color: #e945456c;
+    cursor: pointer;
+    transition: border-color 0.2s ease; /* Transição suave da cor da borda */
+}
+.squareVermelho:hover {
+    background-color: #e945456c; /* Mantém a cor vermelha mesmo quando o cursor está sobre o bloco */
+}
+.squareAzul:hover {
+    background-color: #0075e24d; /* Mantém a cor vermelha mesmo quando o cursor está sobre o bloco */
+}
+.squareAzul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ajuste o tamanho do botão de acordo com suas necessidades */
+    height: 50px;
+    border: 2px solid transparent; /* Adiciona uma borda transparente */
+    background-color: #0075e24d;
+    cursor: pointer;
+    transition: border-color 0.2s ease; /* Transição suave da cor da borda */
+}
+
+.square:focus,
+.square:active {
+    outline: none; /* Remove o contorno padrão ao receber foco ou ser clicado */
+    border-color: #000000; /* Adiciona uma borda quando em foco ou clicado */
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.grayscale {
+    filter: grayscale(1) opacity(0.5);
+}
+
+.card:hover {
+    border: 2px solid var(--globalColor);
+    box-shadow: var(--boxshadow0);
+}
+
+.card.inative {
+    box-shadow: var(--boxshadow0);
+    pointer-events: none;
+}
+
+.no-events {
+    pointer-events: none;
+}
